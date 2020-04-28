@@ -63,11 +63,12 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        if(Gate::denies('edit-user')){
-            return redirect(route('admin.user.index'));
-        }
-        $roles = Role::all();
-        return view('admin.user.edit',compact('roles','user'));
+          if(Gate::denies('edit-user')){
+              return redirect(route('admin.user.index'));
+          }
+           $roles = Role::all();
+          return view('admin.user.edit',compact('user','roles'));
+         
     }
 
     /**
