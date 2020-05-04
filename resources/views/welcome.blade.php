@@ -131,6 +131,7 @@
             @foreach ($abouts as $about)
                 
             <img src="{{$about->image}}" class="img-responsive section-icon hidden-sm hidden-xs">
+            
             <div class="wrapper">
                 <div class="container-fluid">
                     <div class="row dis-table">
@@ -606,62 +607,62 @@
         <section id="have-a-look" class="have-a-look hidden-xs">
             @foreach ($dishes as $dish)
                 
-            @endforeach
-            <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{$dish->image}}">
-            <div class="wrapper">
-                <div class="container-fluid">
-                    <div class="row">
+                <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{$dish->image}}">
+                <div class="wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
 
-                        <div class="menu-gallery" style="width: 50%; float:left;">
-                            <div class="flexslider-container">
-                                <div class="flexslider">
-                                    <ul class="slides">
-                                        <li>
-                                            <img src="{{$dish->list1}}" />
-                                        </li>
-                                        <li>
-                                            <img src="{{$dish->list2}}" />
-                                        </li>
-                                        <li>
-                                            <img src="{{$dish->list3}}" />
-                                        </li>
-                                        <li>
-                                            <img src="{{$dish->list4}}" />
-                                        </li>
-                                        <li>
-                                            <img src="{{$dish->list5}}" />
-                                        </li>
-                                        <li>
-                                            <img src="{{$dish->list6}}" />
-                                        </li>
-                                        <li>
-                                            <img src="{{$dish->list7}}" />
-                                        </li>
-                                        <li>
-                                            <img src="{{$dish->list8}}" />
-                                        </li>
-                                        <li>
-                                            <img src="{{$dish->list9}}" />
-                                        </li>
-                                        <li>
-                                            <img src="{{$dish->list10}}" />
-                                        </li>
-                                        <li>
-                                            <img src="{{$dish->list11}}" />
-                                        </li>
-                                    </ul>
+                            <div class="menu-gallery" style="width: 50%; float:left;">
+                                <div class="flexslider-container">
+                                    <div class="flexslider">
+                                        <ul class="slides">
+                                            <li>
+                                                <img src="{{$dish->list1}}" />
+                                            </li>
+                                            <li>
+                                                <img src="{{$dish->list2}}" />
+                                            </li>
+                                            <li>
+                                                <img src="{{$dish->list3}}" />
+                                            </li>
+                                            <li>
+                                                <img src="{{$dish->list4}}" />
+                                            </li>
+                                            <li>
+                                                <img src="{{$dish->list5}}" />
+                                            </li>
+                                            <li>
+                                                <img src="{{$dish->list6}}" />
+                                            </li>
+                                            <li>
+                                                <img src="{{$dish->list7}}" />
+                                            </li>
+                                            <li>
+                                                <img src="{{$dish->list8}}" />
+                                            </li>
+                                            <li>
+                                                <img src="{{$dish->list9}}" />
+                                            </li>
+                                            <li>
+                                                <img src="{{$dish->list10}}" />
+                                            </li>
+                                            <li>
+                                                <img src="{{$dish->list11}}" />
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="gallery-heading hidden-xs color-bg" style="width: 50%; float:right;">
-                            <h2 class="section-title">Have A Look To Our Dishes</h2>
-                        </div>
-                        
+                            <div class="gallery-heading hidden-xs color-bg" style="width: 50%; float:right;">
+                                <h2 class="section-title">Have A Look To Our Dishes</h2>
+                            </div>
+                            
 
-                    </div> <!-- /.row -->
-                </div> <!-- /.container-fluid -->
-            </div> <!-- /.wrapper -->
+                        </div> <!-- /.row -->
+                    </div> <!-- /.container-fluid -->
+                </div> <!-- /.wrapper -->
+            @endforeach
         </section>
 
 

@@ -34,7 +34,17 @@ Route::resource('/slider','Admin\SliderController');
 
 
 
-Route::namespace('Admin')->prefix('admin')->name('admin.')->group( function(){
+Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:manage-user')->group( function(){
     Route::resource('/user','UserController',['except' =>['show','store','create']]);
+    Route::resource('/about','AboutController');
+    Route::resource('/pricing','PricingController');
+    Route::resource('/beer','BeerController');
+    Route::resource('/ourbeer','OurbeerController');
+    Route::resource('/bread','BreadController');
+    Route::resource('/ourbread','OurbreadController');
+    Route::resource('/feature','FeatureController');
+    Route::resource('/dish','DishController');
+    Route::resource('/reservation','ReservationController');
+     
 
 });
