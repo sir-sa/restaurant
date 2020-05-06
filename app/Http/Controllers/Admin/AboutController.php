@@ -37,17 +37,35 @@ class AboutController extends Controller
      */
     public function store(Request $request)
     {
-        $abouts = new About();
-        if ($request->file('image')) {
-            $file = $request->file('image');    
-            $extension = $file->getClientOriginalExtension(); //getting image extension
-            $filename= time() . '.' . $extension;
-            $file ->move('frontend/images/',$filename);
-            $abouts->image =$filename;
-        } else {
-            return   $request;
-            $abouts ->image ='image';
+        // handle file upload
+        if($request->hasFile('image')){
+            // get file with extension
+            $filenameWithExt = $request->file('image')->getClientOriginalName();
+            // just get filename
+            $filename =pathinfo($filenameWithExt,PATHINFO_FILENAME);
+            // get just extension
+            $extension = $request->file('image')->getClientOriginalExtension();
+            // filename to store
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+            // upload the image
+            $path = $request->file('image')->storeAs('frontend/images/',$fileNameToStore);
+
         }
+        else{
+            $fileNameToStore ="noimage.jpg";
+        }
+        $abouts = new About();
+        // if ($request->file('image')) {
+        //     $file = $request->file('image');
+        //     $extension = $file->getClientOriginalExtension(); //getting image extension
+        //     $filename= time() . '.' . $extension;
+        //     $file ->move('frontend/images/',$filename);
+        //     $abouts->image =$filename;
+        // } else {
+        //     return   $request;
+        //     $abouts ->image ='image';
+        // }
+        $abouts->image = $fileNameToStore;
         $abouts->heading=$request->input('heading');
         $abouts->description=$request->input('description');
         $abouts->text=$request->input('text');
@@ -92,23 +110,23 @@ class AboutController extends Controller
             'heading'=>'required',
             'description'=>'required',
             'text'=>'required',
-             
+
         ]);
 
         $abouts = About::find($id);
         if ($request->file('image')) {
-            $file = $request->file('image');    
+            $file = $request->file('image');
             $extension = $file->getClientOriginalExtension(); //getting image extension
             $filename= time() . '.' . $extension;
             $file ->move('frontend/images/',$filename);
             $abouts->image =$filename;
         }
-         
+
         $abouts->heading = $request->input('heading');
         $abouts->description = $request->input('description');
         $abouts->text = $request->input('text');
-         
-         
+
+
         $abouts->save(); //persist the data
         return redirect()->route('admin.about.index');
     }

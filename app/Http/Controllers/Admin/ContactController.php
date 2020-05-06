@@ -4,6 +4,12 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\ContactRequest;
+
+use Mail;
+use App\Mail\NewContactRequest;
+
+
 
 class ContactController extends Controller
 {
@@ -14,7 +20,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        return view('welcome');
     }
 
     /**
@@ -33,9 +39,15 @@ class ContactController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ContactRequest $request)
     {
-        //
+
+        Mail::to('mngumi44@gmail.com')->send(new NewContactRequest($request));
+
+        return back()->with('status','your message has been received');
+
+
+
     }
 
     /**

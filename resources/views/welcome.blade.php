@@ -95,7 +95,7 @@
 
 
 
-            
+
         <!--== 5. Header ==-->
         <section id="header-slider" class="owl-carousel">
             <div class="item">
@@ -129,9 +129,9 @@
         <!--== 6. About us ==-->
         <section id="about" class="about">
             @foreach ($abouts as $about)
-                
+
             <img src="{{$about->image}}" class="img-responsive section-icon hidden-sm hidden-xs">
-            
+
             <div class="wrapper">
                 <div class="container-fluid">
                     <div class="row dis-table">
@@ -181,10 +181,10 @@
                 </div>
 
                 <div class="container">
-                    <div class="row">  
+                    <div class="row">
                         <div class="col-md-10 col-md-offset-1">
                             <ul id="menu-pricing" class="menu-price">
-                                
+
                                 @foreach ($prices as $price)
                                 <li class="item dinner,item breakfast,item desert,item breakfast special,item dinner special,item desert special">
 
@@ -197,31 +197,31 @@
                                             </span>
                                         </div>
                                     </a>
-                                        
+
                                     <h2 class="white">{{$price->cash}}</h2>
                                 </li>
-                              
-                                 
-                                
+
+
+
                                 @endforeach
                             </ul>
-                            
+
                             <!-- <div class="text-center">
                                 <a id="loadPricingContent" class="btn btn-middle hidden-sm hidden-xs">Load More <span class="caret"></span></a>
                             </div> -->
-                            
-                        </div>   
+
+                        </div>
                     </div>
                 </div>
 
-            </div> 
+            </div>
         </section>
 
 
         <!--== 8. Great Place to enjoy ==-->
         <section id="great-place-to-enjoy" class="great-place-to-enjoy">
             @foreach ($beers as $beer)
-                
+
                 <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{$beer->image}}">
                 <div class="wrapper">
                     <div class="container-fluid">
@@ -230,7 +230,7 @@
                                 <h2 class="section-title">{{$beer->heading}}</h2>
                             </div>
                             <div class="col-xs-6 col-sm-6 dis-table-cell section-bg">
-                                
+
                             </div>
                         </div> <!-- /.dis-table -->
                     </div> <!-- /.row -->
@@ -243,7 +243,7 @@
         <!--==  9. Our Beer  ==-->
         <section id="beer" class="beer">
             @foreach ($ourbeers as $ourbeer)
-                
+
                 <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{$ourbeer->image}}">
                 <div class="container-fluid">
                     <div class="row dis-table">
@@ -281,7 +281,7 @@
                             <h2 class="section-title">Our Breakfast Menu</h2>
                         </div>
                         <div class="col-xs-6 col-sm-6 dis-table-cell section-bg">
-                            
+
                         </div>
                     </div> <!-- /.dis-table -->
                 </div> <!-- /.row -->
@@ -293,7 +293,7 @@
         <!--== 11. Our Bread ==-->
         <section id="bread" class="bread">
             @foreach ($ourbreads as $ourbread)
-                
+
                 <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{$ourbread->image}}">
                 <div class="container-fluid">
                     <div class="row dis-table">
@@ -326,7 +326,7 @@
         <!--== 12. Our Featured Dishes Menu ==-->
         <section id="featured-dish" class="featured-dish">
             @foreach ($features as $feature)
-                
+
             @endforeach
             <img class="img-responsive section-icon hidden-sm hidden-xs" src="frontend/images/icons/food_black.png">
             <div class="wrapper">
@@ -336,7 +336,7 @@
                             <h2 class="section-title">Our Featured Dishes Menu</h2>
                         </div>
                         <div class="col-xs-6 col-sm-6 dis-table-cell section-bg">
-                            
+
                         </div>
                     </div> <!-- /.dis-table -->
                 </div> <!-- /.row -->
@@ -353,7 +353,7 @@
                     <div class="col-md-10 col-md-offset-1 col-sm-9 col-sm-offset-2 col-xs-12">
                         <div class="row">
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                                
+
                                 <div class="row">
 
                                     <div class="menu-catagory">
@@ -606,7 +606,7 @@
 
         <section id="have-a-look" class="have-a-look hidden-xs">
             @foreach ($dishes as $dish)
-                
+
                 <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{$dish->image}}">
                 <div class="wrapper">
                     <div class="container-fluid">
@@ -615,39 +615,40 @@
                             <div class="menu-gallery" style="width: 50%; float:left;">
                                 <div class="flexslider-container">
                                     <div class="flexslider">
+
                                         <ul class="slides">
                                             <li>
-                                                <img src="{{$dish->list1}}" />
+                                                <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{$dish->list1}}">
                                             </li>
                                             <li>
-                                                <img src="{{$dish->list2}}" />
+                                                <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{$dish->list2}}">
                                             </li>
                                             <li>
-                                                <img src="{{$dish->list3}}" />
+                                                <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{$dish->list3}}">
                                             </li>
                                             <li>
-                                                <img src="{{$dish->list4}}" />
+                                                <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{$dish->list4}}">
                                             </li>
                                             <li>
-                                                <img src="{{$dish->list5}}" />
+                                                <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{$dish->list5}}">
                                             </li>
                                             <li>
-                                                <img src="{{$dish->list6}}" />
+                                                <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{$dish->list6}}">
                                             </li>
                                             <li>
-                                                <img src="{{$dish->list7}}" />
+                                                <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{$dish->list7}}">
                                             </li>
                                             <li>
-                                                <img src="{{$dish->list8}}" />
+                                                <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{$dish->list8}}">
                                             </li>
                                             <li>
-                                                <img src="{{$dish->list9}}" />
+                                                <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{$dish->list9}}">
                                             </li>
                                             <li>
-                                                <img src="{{$dish->list10}}" />
+                                                <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{$dish->list10}}">
                                             </li>
                                             <li>
-                                                <img src="{{$dish->list11}}" />
+                                                <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{$dish->list11}}">
                                             </li>
                                         </ul>
                                     </div>
@@ -657,7 +658,7 @@
                             <div class="gallery-heading hidden-xs color-bg" style="width: 50%; float:right;">
                                 <h2 class="section-title">Have A Look To Our Dishes</h2>
                             </div>
-                            
+
 
                         </div> <!-- /.row -->
                     </div> <!-- /.container-fluid -->
@@ -671,7 +672,7 @@
         <!--== 15. Reserve A Table! ==-->
         <section id="reserve" class="reserve">
             @foreach ( $reservations as $reservation)
-                
+
                 <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{$reservation->image}}">
                 <div class="wrapper">
                     <div class="container-fluid">
@@ -680,7 +681,7 @@
                                 <h2 class="section-title">{{$reservation->heading}}</h2>
                             </div>
                             <div class="col-xs-6 col-sm-6 dis-table-cell section-bg">
-                                
+
                             </div>
                         </div> <!-- /.dis-table -->
                     </div> <!-- /.row -->
@@ -698,6 +699,7 @@
                         <div class="row">
                             <div class="col-md-5 col-sm-6">
                                 <form class="reservation-form" method="post" action="reserve.php">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6">
                                             <div class="form-group">
@@ -727,7 +729,7 @@
                                                 Make a reservation
                                             </button>
                                         </div>
-                                            
+
                                     </div>
                                 </form>
                             </div>
@@ -774,7 +776,7 @@
                             <p>+44 12 213584 </p>
                             <p>+254 713643280 </p>
                             <p>sam@sam.com </p>
-                             
+
                         </div>
                     </div>
                 </div>
@@ -806,8 +808,9 @@
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
                         <div class="row">
-                             <form class="contact-form" method="post" action="contact.php">
-                                
+                             <form class="contact-form" method="post" action="{{ route('welcome.store') }}">
+                                @csrf
+
                                 <div class="col-md-6 col-sm-6">
                                     <div class="form-group">
                                         <input  name="name" type="text" class="form-control" id="name" required="required" placeholder="  Name">
@@ -851,7 +854,7 @@
             </div>
         </footer>
 
-    
+
        <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
         <script src="{{asset('frontend/js/owl.carousel.min.js')}}"></script>
         <script type="text/javascript" src="{{('frontend/js/jquery.mixitup.min.js')}}" ></script>
@@ -860,8 +863,8 @@
         <script type="text/javascript" src="{{asset('frontend/js/jquery.hoverdir.js')}}"></script>
         <script type="text/javascript" src="{{('frontend/js/jQuery.scrollSpeed.js')}}"></script>
         <script src="{{asset('frontend/js/script.js')}}"></script>
-        
-        
+
+
 
     </body>
 </html>
@@ -873,4 +876,3 @@
 
 
 
- 

@@ -16,6 +16,12 @@ use App\Ourbread;
 use App\Pricing;
 use App\Reservation;
 
+use App\Http\Requests\ContactRequest;
+
+use Mail;
+use App\Mail\NewContactRequest;
+
+
 class WelcomController extends Controller
 {
     /**
@@ -61,7 +67,9 @@ class WelcomController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Mail::to('mngumi44@gmail.com')->send(new NewContactRequest($request));
+
+        return back()->with('status','your message has been received');
     }
 
     /**

@@ -26,7 +26,9 @@ Route::get('dashboard', function(){
 	return view('admin.dashboard');
 });
 
-Route::resource('','WelcomController');
+// Route::resource('','WelcomController');
+Route::get('','WelcomController@index')->name('welcome.index');
+Route::post('','WelcomController@store')->name('welcome.store');
 
 // Route::get('dashboard','DashboardController@index')->name('admin.dashboard');
 
@@ -45,6 +47,8 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
     Route::resource('/feature','FeatureController');
     Route::resource('/dish','DishController');
     Route::resource('/reservation','ReservationController');
-     
+    Route::resource('/contacts',"ContactController");
+
+
 
 });
